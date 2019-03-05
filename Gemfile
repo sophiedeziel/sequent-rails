@@ -15,4 +15,5 @@ gem 'sequent', github: 'sophiedeziel/sequent', ref: '6e712a8'
 gem 'rails', '~> 6.0.0.beta2'  # Starting development with Rails 6, we'll make sure its Rails 6 compatible later
 
 # To use a debugger
-# gem 'byebug', group: [:development, :test]
+gem 'byebug', group: [:development, :test]
+gem 'pry', group: [:development, :test]

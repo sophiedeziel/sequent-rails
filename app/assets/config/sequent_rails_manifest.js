@@ -1,1 +1,1 @@
-//= link_directory ../stylesheets/sequent/rails .css
+//= link_directory ../stylesheets/sequent.css
