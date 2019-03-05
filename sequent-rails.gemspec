@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.version     = Sequent::Rails::VERSION
   spec.authors     = ["Sophie Déziel"]
   spec.email       = ["courrier@sophiedeziel.com"]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of Sequent::Rails."
-  spec.description = "TODO: Description of Sequent::Rails."
+  spec.homepage    = "https://github.com/sophiedeziel/sequent-rails"
+  spec.summary     = "Sequent for Rails"
+  spec.description = "Sequent-Rails is providing Rails specific features and helpers around the CQRS and Event-Sourcing framework Sequent."
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -25,7 +25,12 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.add_dependency "rails", "~> 6.0.0.beta2"
+  spec.test_files = Dir["spec/**/*"]
+
+  spec.add_dependency "rails", ">= 5.1"
+  spec.add_development_dependency 'rspec-rails'
+  spec.add_development_dependency 'capybara'
+  spec.add_development_dependency 'factory_girl_rails'
 
   spec.add_development_dependency "sqlite3"
 end
