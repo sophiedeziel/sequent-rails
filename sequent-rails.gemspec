@@ -27,10 +27,11 @@ Gem::Specification.new do |spec|
 
   spec.test_files = Dir["spec/**/*"]
 
-  spec.add_dependency "rails", ">= 5.1"
+  spec.add_dependency "rails", ">= 5.2"
   spec.add_development_dependency 'rspec-rails'
   spec.add_development_dependency 'capybara'
-  spec.add_development_dependency 'factory_girl_rails'
+  spec.add_development_dependency 'factory_bot_rails'
+  spec.add_development_dependency 'sequent'
 
   spec.add_development_dependency "sqlite3"
 end
