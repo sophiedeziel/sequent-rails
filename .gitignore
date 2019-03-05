@@ -1,4 +1,12 @@
 .bundle/
+tmp/
+Gemfile.lock
+.rvmrc
+.rails-version*
+.DS_Store
+.rbenv-version
+/.ruby-gemset
+/.ruby-version
 log/*.log
 pkg/
 spec/dummy/db/*.sqlite3
