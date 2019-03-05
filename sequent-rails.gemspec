@@ -1,12 +1,12 @@
 $:.push File.expand_path("lib", __dir__)
 
 # Maintain your gem's version:
-require "sequent/rails/version"
+require "sequent/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.name        = "sequent-rails"
-  spec.version     = Sequent::Rails::VERSION
+  spec.version     = Sequent::VERSION
   spec.authors     = ["Sophie Déziel"]
   spec.email       = ["courrier@sophiedeziel.com"]
   spec.homepage    = "https://github.com/sophiedeziel/sequent-rails"

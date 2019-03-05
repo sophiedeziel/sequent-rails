@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Sequent::Rails::Engine => "/sequent-rails"
+  mount Sequent::Engine => "/sequent-rails"
 end

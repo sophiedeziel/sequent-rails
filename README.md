@@ -1,4 +1,4 @@
-# Sequent::Rails
+# Sequent-Rails
 Short description and motivation.
 
 ## Usage

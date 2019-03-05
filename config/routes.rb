@@ -1,2 +1,2 @@
-Sequent::Rails::Engine.routes.draw do
+Sequent::Engine.routes.draw do
 end
