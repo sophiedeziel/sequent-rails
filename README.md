@@ -13,13 +13,12 @@ gem 'sequent-rails'
 
 And then execute:
 ```bash
-$ bundle
+bundle
+rails generate sequent:install
+rails db:migrate
 ```
 
-Or install it yourself as:
-```bash
-$ gem install sequent-rails
-```
+This will generate a migration file to create Sequent's event store in the database and then run it.
 
 ## Contributing
 Contribution directions go here.
