@@ -12,7 +12,13 @@ gemspec
 # your gem to rubygems.org.
 
 gem 'sequent', github: 'sophiedeziel/sequent', ref: '6e712a8'
-gem 'rails', '~> 6.0.0.beta2'  # Starting development with Rails 6, we'll make sure its Rails 6 compatible later
+gem 'rails', '~> 6.0.0.beta2'  # Starting development with Rails 6, we'll make sure its Rails 5 compatible later
+
+gem 'rspec-rails', github: 'rspec/rspec-rails', branch: '4-0-dev'
+gem 'rspec-core', github: 'rspec/rspec-core'
+gem 'rspec-mocks', github: 'rspec/rspec-mocks'
+gem 'rspec-expectations', github: 'rspec/rspec-expectations'
+gem 'rspec-support', github: 'rspec/rspec-support'
 
 # To use a debugger
 gem 'byebug', group: [:development, :test]
