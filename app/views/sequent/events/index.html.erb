@@ -1,3 +1,16 @@
-<% @events.each do |event| %>
+<table class='table'>
+  <thead>
+    <tr>
+      <th scope="col"> id</th>
+      <th scope="col"> aggregate_id</th>
+      <th scope="col"> sequence_number</th>
+      <th scope="col"> event_type</th>
+      <th scope="col"> command_record</th>
+      <th scope="col"> event_json</th>
+    </tr>
+  </thead>
 
-<% end %>
+  <tbody class="events">
+    <%= render collection: @events, partial: 'event_record' %>
+  </tbody>
+</table>

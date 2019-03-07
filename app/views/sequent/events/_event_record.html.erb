@@ -1,0 +1,12 @@
+<tr>
+  <th scope="row"> <%= event_record.id %></th>
+  <td><%= event_record.aggregate_id %></th>
+  <td><%= event_record.sequence_number %></th>
+  <td><%= event_record.event_type %></th>
+  <td><%= event_record.command_record_id %></th>
+  <td>
+    <code>
+      <%= event_record.event_json %>
+    </code>
+  </td>
+</tr>
