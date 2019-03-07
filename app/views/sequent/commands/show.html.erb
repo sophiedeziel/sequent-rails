@@ -1,0 +1,44 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Attribute</th>
+      <th scope="col">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">id</th>
+      <td><%= @command.id %></td>
+    </tr>
+
+    <tr>
+      <th scope="row">Type</th>
+      <td><%= @command.command_type %></td>
+    </tr>
+
+    <tr>
+      <th scope="row">User</th>
+      <td><%= @command.user_id %></td>
+    </tr>
+
+    <tr>
+      <th scope="row">Created At</th>
+      <td><%= @command.created_at %></td>
+    </tr>
+
+    <tr>
+      <th scope="row">aggregate_id</th>
+      <td><%= @command.aggregate_id %></td>
+    </tr>
+
+    <tr>
+      <th scope="row">event_json</th>
+      <td>
+        <code>
+          <%= @command.command_json %>
+        </code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

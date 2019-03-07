@@ -7,40 +7,38 @@
   </thead>
   <tbody>
     <tr>
-      <th scope="row">id</th>
+      <th scope="row">Id</th>
       <td><%= @event.id %></td>
     </tr>
 
     <tr>
-      <th scope="row">event_type</th>
+      <th scope="row">Type</th>
       <td><%= @event.event_type %></td>
     </tr>
 
     <tr>
-      <th scope="row">aggregate_id</th>
+      <th scope="row">Aggregate Id</th>
       <td><%= @event.aggregate_id %></td>
     </tr>
 
     <tr>
-      <th scope="row">sequence_number</th>
+      <th scope="row">Sequence Number</th>
       <td><%= @event.sequence_number %></td>
     </tr>
 
     <tr>
-      <th scope="row">command_record_id</th>
-      <td><%= @event.command_record_id %></td>
+      <th scope="row">Command</th>
+      <td><%= link_to @event.command_record.command_type, command_path(@event.command_record) %></td>
     </tr>
 
     <tr>
-      <th scope="row">event_json</th>
+      <th scope="row">JSON</th>
       <td>
         <code>
           <%= @event.event_json %>
         </code>
-
       </td>
     </tr>
-
   </tbody>
 </table>
 

@@ -1,9 +1,9 @@
 <tr>
   <th scope="row"> <%= event_record.id %></th>
+  <td><%= link_to event_record.event_type, event_path(event_record) %></th>
   <td><%= event_record.aggregate_id %></th>
   <td><%= event_record.sequence_number %></th>
-  <td><%= event_record.event_type %></th>
-  <td><%= event_record.command_record_id %></th>
+  <td><%= link_to event_record.command_record.command_type, command_path(event_record.command_record) %></th>
   <td>
     <code>
       <%= event_record.event_json %>
