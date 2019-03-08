@@ -3,7 +3,7 @@ require_dependency "sequent/application_controller"
 module Sequent
   class EventsController < ApplicationController
     def index
-      @events = Sequent::Core::EventRecord.all.order(id: :desc).includes(:command_record)
+      @grouped_events = Sequent::Core::EventRecord.all.order(id: :desc).includes(:command_record).group_by(&:command_record)
     end
 
     def show

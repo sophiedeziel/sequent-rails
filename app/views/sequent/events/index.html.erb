@@ -5,12 +5,20 @@
       <th scope="col"> event_type</th>
       <th scope="col"> aggregate_id</th>
       <th scope="col"> sequence_number</th>
-      <th scope="col"> command_record</th>
       <th scope="col"> event_json</th>
     </tr>
   </thead>
 
-  <tbody class="events">
-    <%= render collection: @events, partial: 'event_record' %>
-  </tbody>
+  <% @grouped_events.each do |command, events| %>
+    <thead class="thead-light">
+      <tr>
+        <th colspan="5">
+          <%= link_to command.command_type, command_path(command) %>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="events">
+      <%= render collection: events, partial: 'event_record' %>
+    </tbody>
+  <% end %>
 </table>
