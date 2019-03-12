@@ -1,6 +1,7 @@
 require 'rails_helper'
+require_relative '../../dummy/app/domains/dummy'
 
-RSpec.describe Sequent::EventsController, type: :controller do
+RSpec.describe Sequent::EventsController do
   routes { Sequent::Engine.routes }
 
   describe "GET #index" do
@@ -12,7 +13,8 @@ RSpec.describe Sequent::EventsController, type: :controller do
 
   describe "GET #show" do
     it "returns http success" do
-      get :show
+      Sequent.command_service.execute_commands SomeCommand.new(some_value: 1, aggregate_id: 'gaargergtte')
+      get :show, params: { id: Sequent::Core::EventRecord.last.id }
       expect(response).to have_http_status(:success)
     end
   end

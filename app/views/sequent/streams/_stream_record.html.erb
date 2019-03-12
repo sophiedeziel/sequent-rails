@@ -1,0 +1,10 @@
+<tr>
+  <th scope="row"> <%= stream_record.id %></th>
+  <td><%= link_to stream_record.aggregate_id, stream_events_path(stream_record.id) %></td>
+  <td><%= link_to stream_record.aggregate_type, url_for(aggregate_type: stream_record.aggregate_type) %></td>
+  <td>
+    <code>
+      <%= stream_record.attributes.to_json %>
+    </code>
+  </td>
+</tr>
