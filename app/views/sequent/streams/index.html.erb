@@ -1,4 +1,4 @@
-<%= link_to params[:aggregate_type], url_for(aggregate_type: nil), class: 'badge badge-secondary' if params[:aggregate_type] %>
+<%= link_to "Type: " + params[:aggregate_type], url_for(aggregate_type: nil), class: 'badge badge-secondary' if params[:aggregate_type] %>
 
 <table class="table table-striped table-hover">
   <thead class="thead-dark">

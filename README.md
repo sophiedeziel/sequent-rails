@@ -1,5 +1,5 @@
 # Sequent-Rails
-Short description and motivation.
+Warning: This is an experiment gem, not sutable for production use.
 
 ## Usage
 How to use my plugin.

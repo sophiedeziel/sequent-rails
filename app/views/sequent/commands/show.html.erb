@@ -36,7 +36,7 @@
       <th scope="row">event_json</th>
       <td>
         <code>
-          <%= @command.command_json %>
+          <%= simple_format JSON.pretty_generate(JSON.parse @command.command_json) %>
         </code>
       </td>
     </tr>

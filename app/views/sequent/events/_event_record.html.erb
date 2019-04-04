@@ -1,11 +1,11 @@
 <tr>
   <th scope="row"> <%= event_record.id %></th>
   <td><%= link_to event_record.event_type, event_path(event_record) %></td>
-  <td><%= event_record.aggregate_id %></td>
+  <td><%= link_to event_record.aggregate_id, stream_events_path(stream_id: event_record.stream_record_id) %></td>
   <td><%= event_record.sequence_number %></td>
   <td>
     <code>
-      <%= event_record.event_json %>
+      <%= JSON.parse(event_record.event_json).except("sequence_number", "aggregate_id").to_json %>
     </code>
   </td>
 </tr>

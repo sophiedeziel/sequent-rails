@@ -24,6 +24,14 @@
   </head>
   <body>
     <div class='container'>
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <%= link_to "Streams", streams_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Events", events_path, class: 'nav-link' %>
+        </li>
+      </ul>
       <%= yield %>
     </div>
 

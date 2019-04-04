@@ -1,3 +1,6 @@
+<%= link_to "Aggregate:" + params[:aggregate_id], url_for(aggregate_id: nil), class: 'badge badge-secondary' if params[:aggregate_id] %>
+<%= link_to "Stream: " + params[:stream_id], url_for(stream_id: nil), class: 'badge badge-secondary' if params[:stream_id] %>
+
 <table class="table table-striped table-hover">
   <thead class="thead-dark">
     <tr>
@@ -12,8 +15,11 @@
   <% @grouped_events.each do |command, events| %>
     <thead class="thead-light">
       <tr>
-        <th colspan="5">
+        <th colspan="4">
           <%= link_to command.command_type, command_path(command) %>
+        </th>
+        <th colspan="4">
+          User: <%= command.user_id %>
         </th>
       </tr>
     </thead>
