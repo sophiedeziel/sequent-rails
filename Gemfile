@@ -12,7 +12,7 @@ gemspec
 # your gem to rubygems.org.
 
 gem 'sequent', github: 'sophiedeziel/sequent', ref: '6e712a8'
-gem 'rails', '~> 6.0.0'  # Starting development with Rails 6, we'll make sure its Rails 5 compatible later
+gem 'rails', '< 7.0.0'
 
 gem 'rspec-rails', github: 'rspec/rspec-rails', branch: '4-0-dev'
 gem 'rspec-core', github: 'rspec/rspec-core'
